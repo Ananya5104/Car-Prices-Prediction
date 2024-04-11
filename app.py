@@ -3,12 +3,13 @@ import streamlit as st
 import numpy as np  
 import pandas as pd
 import warnings
+import sklearn
 
 # Ignore all UserWarnings
 warnings.filterwarnings('ignore', category=UserWarning)
 
 
-loaded_model = pickle.load(open("model_carprice", 'rb'))
+loaded_model = pickle.load(open("model_carprice.sav", 'rb'))
 
 def predict_car_price(mileage,age):
     data = pd.DataFrame({'Mileage': [mileage],'Age(yrs)': [age]})
