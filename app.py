@@ -2,6 +2,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 import warnings
+import sklearn
 
 # Ignore all UserWarnings
 warnings.filterwarnings('ignore', category=UserWarning)
