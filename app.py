@@ -20,7 +20,7 @@ def predict_car_price(year,mileage):
 
 def main():
     st.title("Car Price Prediction (ReSale)")
-    age = st.text_input('Age')
+    age = st.text_input('Year of Production')
     mileage = st.text_input('Mileage')
     prediction = ''
     if st.button('Predict'):
