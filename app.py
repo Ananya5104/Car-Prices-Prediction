@@ -10,8 +10,8 @@ warnings.filterwarnings('ignore', category=UserWarning)
 
 loaded_model = pickle.load(open("model_carprice.sav", 'rb'))
 
-def predict_car_price(mileage,age):
-    data = pd.DataFrame({'Mileage': [mileage],'Age(yrs)': [age]})
+def predict_car_price(year,mileage):
+    data = pd.DataFrame({'	Prod. year': [year],'Mileage': [mileage]})
     # input_data = (mileage,age)
     # input_data_as_numpy_array = np.asarray(input_data)
     # input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
@@ -24,7 +24,7 @@ def main():
     mileage = st.text_input('Mileage')
     prediction = ''
     if st.button('Predict'):
-        prediction = predict_car_price(mileage,age)
+        prediction = predict_car_price(age,mileage)
         st.write('Predicted Price: (in $) ',prediction)
 if __name__ == '__main__':
     main()
