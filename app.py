@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore', category=UserWarning)
 loaded_model = pickle.load(open("trained_model.sav", 'rb'))
 
 def predict_car_price(year,mileage):
-    data = pd.DataFrame({'	Prod. year': [year],'Mileage': [mileage]})
+    data = pd.DataFrame({'Prod. year': [year],'Mileage': [mileage]})
     # input_data = (mileage,age)
     # input_data_as_numpy_array = np.asarray(input_data)
     # input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
