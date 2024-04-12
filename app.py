@@ -8,7 +8,7 @@ import sklearn
 warnings.filterwarnings('ignore', category=UserWarning)
 
 
-loaded_model = pickle.load(open("model_carprice.sav", 'rb'))
+loaded_model = pickle.load(open("trained_model.sav", 'rb'))
 
 def predict_car_price(year,mileage):
     data = pd.DataFrame({'	Prod. year': [year],'Mileage': [mileage]})
